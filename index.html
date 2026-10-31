@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(주)청림글로비즈 | CHEONG LIM Globiz - B2B 전자제품·가전·헬스케어 유통 전문기업</title>
+    <!-- Meta for SEO & Social Sharing -->
+    <meta name="description" content="(주)청림글로비즈는 전자랜드 B2B 공식 파트너사로서 삼성·LG 등 대형가전, IT 디바이스, 프리미엄 헬스케어 및 자체 특허 신제품을 전국 기업체와 폐쇄몰에 직납합니다.">
+    <meta name="keywords" content="청림글로비즈, CHEONG LIM Globiz, 전자랜드 B2B, 전자제품 도매, 복지몰 입점, MRO 특판, 기숙사 가전 납품, 친환경 뻥튀기머신 특허">
+    <meta property="og:title" content="(주)청림글로비즈 | 글로벌 디지털 B2B 유통 파트너">
+    <meta property="og:description" content="고객의 가치를 창조하는 기업, 신뢰와 기술 혁신으로 검증된 B2B 가전·헬스케어·기프트 유통 솔루션">
+    <meta property="og:type" content="website">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,16 +19,17 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            500: '#1d4ed8',
-                            600: '#0284c7',
-                            700: '#0369a1',
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#1d4ed8',
                             800: '#0f274a',
-                            900: '#0b192e',
-                            navy: '#0a1526',
+                            900: '#07152b',
+                            navy: '#050c18',
                             accent: '#00d2ff',
-                            gold: '#f59e0b'
+                            gold: '#f59e0b',
+                            emerald: '#10b981'
                         }
                     },
                     fontFamily: {
@@ -32,14 +40,14 @@
                             '0%': { transform: 'translateX(0%)' },
                             '100%': { transform: 'translateX(-50%)' }
                         },
-                        pulseGlow: {
-                            '0%, 100%': { opacity: '0.4' },
-                            '50%': { opacity: '0.8' }
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
                         }
                     },
                     animation: {
                         'ticker': 'ticker 35s linear infinite',
-                        'glow': 'pulseGlow 4s ease-in-out infinite'
+                        'shimmer': 'shimmer 6s infinite linear'
                     }
                 }
             }
@@ -48,7 +56,8 @@
     <!-- Pretendard Font -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         body {
             font-family: 'Pretendard', sans-serif;
@@ -56,65 +65,60 @@
             color: #1e293b;
             overflow-x: hidden;
         }
-        .hero-pattern {
-            background-color: #070e1b;
+        .hero-mesh {
+            background-color: #07152b;
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(2, 132, 199, 0.25) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(0, 210, 255, 0.15) 0%, transparent 40%),
-                linear-gradient(rgba(7, 14, 27, 0.94), rgba(7, 14, 27, 0.98)),
-                repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 41px),
-                repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 41px);
+                radial-gradient(circle at 15% 25%, rgba(2, 132, 199, 0.35) 0%, transparent 45%),
+                radial-gradient(circle at 85% 75%, rgba(0, 210, 255, 0.2) 0%, transparent 45%),
+                linear-gradient(rgba(7, 21, 43, 0.94), rgba(7, 21, 43, 0.98)),
+                repeating-linear-gradient(0deg, transparent, transparent 48px, rgba(255,255,255,0.02) 48px, rgba(255,255,255,0.02) 49px),
+                repeating-linear-gradient(90deg, transparent, transparent 48px, rgba(255,255,255,0.02) 48px, rgba(255,255,255,0.02) 49px);
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(226, 232, 240, 0.8);
-        }
-        .dark-glass {
-            background: rgba(15, 39, 74, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .text-gradient {
             background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .text-gradient-dark {
-            background: linear-gradient(135deg, #0f274a 0%, #0284c7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .badge-glow {
+            box-shadow: 0 0 15px rgba(2, 132, 199, 0.35);
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased selection:bg-sky-500 selection:text-white">
 
-    <!-- 상단 B2B 특판 티커 배너 (Top Live Ticker) -->
-    <aside aria-label="실시간 소싱 안내" class="bg-slate-900 border-b border-slate-800 text-xs text-slate-300 py-2.5 overflow-hidden sticky top-0 z-50">
+    <!-- 상단 라이브 B2B 공지 롤링 티커 (Top Live Ticker) -->
+    <aside aria-label="실시간 B2B 알림" class="bg-slate-950 border-b border-slate-800 text-xs text-slate-300 py-2.5 overflow-hidden sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
-            <div class="flex items-center gap-2 flex-shrink-0 z-10 bg-slate-900 pr-3 font-semibold text-sky-400">
-                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                <i class="fa-solid fa-bullhorn text-xs"></i>
-                <span class="tracking-wide uppercase font-bold text-[11px]">B2B SOURCING LIVE</span>
+            <div class="flex items-center gap-2 flex-shrink-0 z-10 bg-slate-950 pr-4 font-semibold text-sky-400">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="tracking-wide uppercase font-black text-[11px]">B2B LIVE HUB</span>
             </div>
             
-            <div class="overflow-hidden relative w-full mask-gradient">
-                <div class="flex whitespace-nowrap animate-ticker gap-8 text-[13px] text-slate-300">
-                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-bolt text-amber-400"></i> 전자랜드 B2B 공식 전략 파트너십 구축</span>
-                    <span class="text-slate-600">|</span>
-                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-boxes-packing text-sky-400"></i> 삼성 & LG 시스템 가전 대량 프로젝트 납품 특가 견적</span>
-                    <span class="text-slate-600">|</span>
-                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-award text-amber-400"></i> 나비 MRO / KG 이니시스 폐쇄몰 입점 승인 완료</span>
-                    <span class="text-slate-600">|</span>
-                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-building text-blue-400"></i> 이랜드건설 구의현장 및 이랜드 마곡사무실 납품 실적</span>
-                    <span class="text-slate-600">|</span>
-                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-seedling text-emerald-400"></i> 특허 등록 친환경 뻥튀기머신 사내벤처 독점 공급 진행중</span>
+            <div class="overflow-hidden relative w-full">
+                <div class="flex whitespace-nowrap animate-ticker gap-8 text-[12.5px] text-slate-300">
+                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-bolt text-amber-400"></i> 전자랜드 B2B 공식 전략 파트너십 구축 (사내벤처 출범)</span>
+                    <span class="text-slate-700">◆</span>
+                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-boxes-packing text-sky-400"></i> 삼성 & LG 시스템 가전 대량 프로젝트 납품 특가 견적 상시 발급</span>
+                    <span class="text-slate-700">◆</span>
+                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-award text-emerald-400"></i> 나비 MRO / KG 이니시스 폐쇄몰 입점 승인 완료</span>
+                    <span class="text-slate-700">◆</span>
+                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-building text-blue-400"></i> 이랜드건설 구의현장 및 이랜드 마곡사무실 납품 실적 달성</span>
+                    <span class="text-slate-700">◆</span>
+                    <span class="inline-flex items-center gap-2"><i class="fa-solid fa-lightbulb text-amber-300"></i> 과기정통부 연구개발전담부서 인증 및 친환경 뻥튀기머신 특허 등록</span>
                 </div>
             </div>
 
-            <div class="hidden md:flex items-center gap-4 flex-shrink-0 z-10 bg-slate-900 pl-4 text-[12px] text-slate-400">
-                <a href="tel:02-1234-5678" class="hover:text-white transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-sky-400"></i> 02-706-0305</a>
-                <span class="text-slate-700">/</span>
+            <div class="hidden md:flex items-center gap-4 flex-shrink-0 z-10 bg-slate-950 pl-4 text-[12px] text-slate-400">
+                <a href="tel:02-706-0305" class="hover:text-white transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-sky-400"></i> 02-706-0305</a>
+                <span class="text-slate-700">|</span>
                 <a href="mailto:duback@etland.co.kr" class="hover:text-white transition flex items-center gap-1.5"><i class="fa-solid fa-envelope text-sky-400"></i> duback@etland.co.kr</a>
             </div>
         </div>
@@ -125,37 +129,37 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- 로고 -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-700 via-sky-500 to-teal-400 flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">
+                <a href="#" class="flex items-center gap-3.5 group">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-700 via-sky-600 to-teal-400 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-sky-600/25 group-hover:scale-105 transition-transform">
                         <i class="fa-solid fa-globe"></i>
                     </div>
                     <div>
                         <div class="flex items-center gap-1.5">
-                            <span class="font-black text-xl tracking-tight text-slate-900">청림글로비즈</span>
-                            <span class="text-[10px] bg-sky-100 text-sky-700 font-bold px-1.5 py-0.5 rounded uppercase">Corp</span>
+                            <span class="font-black text-xl sm:text-2xl tracking-tight text-slate-900">청림글로비즈</span>
+                            <span class="text-[10px] bg-sky-100 text-sky-800 font-extrabold px-1.5 py-0.5 rounded tracking-wider uppercase">B2B Corp</span>
                         </div>
-                        <p class="text-[11px] font-medium tracking-wider text-slate-500 uppercase">CHEONG LIM Globiz Co., Ltd</p>
+                        <p class="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">CHEONG LIM Globiz Co., Ltd</p>
                     </div>
                 </a>
 
-                <!-- 데스크톱 메뉴 -->
-                <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-700 text-sm">
-                    <a href="#about" class="hover:text-sky-600 transition flex items-center gap-1">회사소개</a>
-                    <a href="#business" class="hover:text-sky-600 transition flex items-center gap-1">사업분야</a>
-                    <a href="#partners" class="hover:text-sky-600 transition flex items-center gap-1">공급 브랜드</a>
-                    <a href="#rnd" class="hover:text-sky-600 transition flex items-center gap-1">R&D 및 인증</a>
-                    <a href="#history" class="hover:text-sky-600 transition flex items-center gap-1">주요 실적</a>
-                    <a href="#contact" class="hover:text-sky-600 transition flex items-center gap-1">오시는 길</a>
+                <!-- 데스크톱 네비게이션 -->
+                <nav class="hidden lg:flex items-center gap-8 font-bold text-slate-700 text-sm">
+                    <a href="#about" class="hover:text-sky-600 transition">회사소개</a>
+                    <a href="#business" class="hover:text-sky-600 transition">사업분야</a>
+                    <a href="#partners" class="hover:text-sky-600 transition">공급 브랜드</a>
+                    <a href="#rnd" class="hover:text-sky-600 transition">R&D 및 인증</a>
+                    <a href="#history" class="hover:text-sky-600 transition">주요 실적</a>
+                    <a href="#contact" class="hover:text-sky-600 transition">오시는 길</a>
                 </nav>
 
                 <!-- 우측 액션 버튼 -->
                 <div class="flex items-center gap-3">
-                    <a href="#rfq" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-md shadow-sky-600/25 transition-all transform hover:-translate-y-0.5">
+                    <a href="#rfq" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-blue-700 to-sky-600 hover:from-blue-800 hover:to-sky-700 text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-md shadow-sky-600/25 transition-all transform hover:-translate-y-0.5">
                         <i class="fa-solid fa-file-invoice-dollar"></i>
                         <span>B2B 견적 문의</span>
                     </a>
-                    <!-- 모바일 햄버거 버튼 -->
-                    <button id="mobileMenuBtn" class="md:hidden text-slate-700 hover:text-sky-600 p-2 text-2xl focus:outline-none">
+                    <!-- 모바일 토글 버튼 -->
+                    <button id="mobileMenuBtn" aria-label="메뉴 열기" class="lg:hidden text-slate-700 hover:text-sky-600 p-2 text-2xl focus:outline-none">
                         <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
@@ -163,29 +167,27 @@
         </div>
 
         <!-- 모바일 드롭다운 메뉴 -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-3 shadow-xl">
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-3 shadow-2xl">
             <a href="#about" class="block py-2 text-slate-800 font-semibold border-b border-slate-100">회사소개</a>
             <a href="#business" class="block py-2 text-slate-800 font-semibold border-b border-slate-100">사업분야</a>
             <a href="#partners" class="block py-2 text-slate-800 font-semibold border-b border-slate-100">공급 브랜드</a>
             <a href="#rnd" class="block py-2 text-slate-800 font-semibold border-b border-slate-100">R&D 및 인증</a>
             <a href="#history" class="block py-2 text-slate-800 font-semibold border-b border-slate-100">주요 실적</a>
             <a href="#contact" class="block py-2 text-slate-800 font-semibold border-b border-slate-100">오시는 길</a>
-            <div class="pt-2">
-                <a href="#rfq" class="block text-center bg-sky-600 text-white font-bold py-3 rounded-xl shadow-md">실시간 B2B 견적 신청</a>
+            <div class="pt-3">
+                <a href="#rfq" class="block text-center bg-gradient-to-r from-blue-600 to-sky-600 text-white font-bold py-3.5 rounded-xl shadow-md">실시간 B2B 대량 견적 계산하기</a>
             </div>
         </div>
     </header>
 
     <!-- 히어로 섹션 (Multi-Brand Digital Universe) -->
-    <section class="hero-pattern text-white relative py-20 lg:py-32 overflow-hidden border-b border-slate-800">
-        <!-- 배경 조명 효과 -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-sky-500/10 blur-[120px] rounded-full pointer-events-none"></div>
-
+    <section class="hero-mesh text-white relative py-20 lg:py-28 overflow-hidden border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
                 <!-- 좌측 메인 카피 -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-950/80 border border-sky-500/30 text-sky-300 text-xs sm:text-sm font-semibold tracking-wide">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-950/90 border border-sky-500/40 text-sky-300 text-xs sm:text-sm font-semibold tracking-wide badge-glow">
                         <i class="fa-solid fa-shield-halved text-sky-400"></i> 전자랜드 공식 B2B 사내벤처 & MRO 특판 전문기업
                     </div>
                     
@@ -195,199 +197,202 @@
                     </h1>
                     
                     <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-                        <strong>(주)청림글로비즈</strong>는 삼성·LG 등 국내외 유수 브랜드의 가전·IT 디바이스, 프리미엄 헬스케어, 기프트 솔루션을 엄선하여 
-                        복지몰, 폐쇄몰, 건설현장 및 관공서에 최적화된 One-Stop 맞춤 유통을 실현합니다.
+                        <strong>(주)청림글로비즈</strong>는 삼성·LG 등 국내외 유수 브랜드의 가전·IT 디바이스, 프리미엄 헬스케어, 생활용품 및 기프트 솔루션을 엄선하여 
+                        복지몰, 폐쇄몰, 건설현장 및 기숙사에 최적화된 One-Stop 맞춤 유통을 제안합니다.
                     </p>
 
                     <!-- CTA 버튼 그룹 -->
-                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#rfq" class="px-8 py-4 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 font-bold text-white shadow-xl shadow-sky-600/30 flex items-center justify-center gap-3 text-base transition transform hover:-translate-y-1">
+                    <div class="pt-3 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#rfq" class="px-8 py-4 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 font-extrabold text-white shadow-xl shadow-sky-600/30 flex items-center justify-center gap-3 text-base transition transform hover:-translate-y-1">
                             <i class="fa-solid fa-calculator text-lg"></i>
                             <span>B2B 견적 시뮬레이터</span>
                         </a>
                         <a href="#about" class="px-7 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-600 text-slate-200 font-bold flex items-center justify-center gap-2 text-base transition backdrop-blur-sm">
-                            <i class="fa-solid fa-file-lines text-sky-400"></i>
-                            <span>회사 소개서 보기</span>
+                            <i class="fa-solid fa-building text-sky-400"></i>
+                            <span>회사 소개 보기</span>
                         </a>
                     </div>
 
-                    <!-- 핵심 지표 스탯 배지 -->
+                    <!-- 핵심 스탯 배지 -->
                     <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
                         <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold text-sky-400">30+</div>
+                            <div class="text-2xl sm:text-3xl font-black text-sky-400">30+</div>
                             <div class="text-xs text-slate-400 mt-1 font-medium">B2B 고객사 납품</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold text-white">15억+</div>
-                            <div class="text-xs text-slate-400 mt-1 font-medium">2025 거래 실적</div>
+                            <div class="text-2xl sm:text-3xl font-black text-white">15억+</div>
+                            <div class="text-xs text-slate-400 mt-1 font-medium">연간 거래 규모 달성</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">100%</div>
-                            <div class="text-xs text-slate-400 mt-1 font-medium">직접소싱·정품보장</div>
+                            <div class="text-2xl sm:text-3xl font-black text-emerald-400">100%</div>
+                            <div class="text-xs text-slate-400 mt-1 font-medium">정품보증·직접소싱</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 우측 3D 스타일 테크 비주얼 카드 (PPT Multi-Brand Digital Universe 모티브) -->
+                <!-- 우측 테크 비주얼 카드 (PPT Multi-Brand Digital Universe 모티브) -->
                 <div class="lg:col-span-5 relative">
-                    <div class="relative mx-auto max-w-md bg-gradient-to-b from-slate-800/90 to-slate-900/95 p-6 sm:p-8 rounded-3xl border border-sky-500/30 shadow-2xl shadow-sky-500/10">
-                        <div class="flex items-center justify-between pb-4 border-b border-slate-700/80">
-                            <div class="flex items-center gap-2.5">
-                                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-                                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                    <div class="relative mx-auto max-w-md bg-gradient-to-b from-slate-900/90 to-slate-950/95 p-6 sm:p-8 rounded-3xl border border-sky-500/30 shadow-2xl shadow-sky-500/15">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
                             </div>
-                            <span class="text-xs font-mono text-sky-400 bg-sky-950/80 px-2.5 py-0.5 rounded border border-sky-800">CLG-NETWORK OS v2.6</span>
+                            <span class="text-xs font-mono text-sky-400 bg-sky-950/90 px-2.5 py-0.5 rounded border border-sky-800">CLG-NETWORK OS v2.6</span>
                         </div>
 
-                        <!-- 중앙 그래픽 홀로그램 프레임 -->
-                        <div class="my-6 relative py-4 text-center">
-                            <div class="w-24 h-24 mx-auto rounded-2xl bg-gradient-to-tr from-sky-600 via-blue-500 to-indigo-600 flex items-center justify-center text-white text-4xl shadow-lg shadow-sky-500/40 animate-pulse">
+                        <!-- 중앙 홀로그램 그래픽 프레임 -->
+                        <div class="my-6 text-center py-2">
+                            <div class="w-24 h-24 mx-auto rounded-3xl bg-gradient-to-tr from-sky-600 via-blue-600 to-indigo-600 flex items-center justify-center text-white text-4xl shadow-xl shadow-sky-500/40 animate-pulse">
                                 <i class="fa-solid fa-network-wired"></i>
                             </div>
-                            <h3 class="mt-4 font-bold text-lg text-white">MULTI-BRAND DIGITAL UNIVERSE</h3>
-                            <p class="text-xs text-slate-400 mt-1">전자랜드 B2B 인프라 & 직접 소싱 네트워크 결합</p>
+                            <h3 class="mt-4 font-extrabold text-lg text-white tracking-wide">MULTI-BRAND DIGITAL UNIVERSE</h3>
+                            <p class="text-xs text-slate-400 mt-1">전자랜드 인프라 기반 글로벌 가전·기프트 직결 공급망</p>
                         </div>
 
-                        <!-- 품목 빠른 현황 그리드 -->
+                        <!-- 4개 핵심 소싱 그리드 -->
                         <div class="grid grid-cols-2 gap-3 text-xs">
-                            <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center gap-3">
+                            <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700/80 flex items-center gap-3">
                                 <i class="fa-solid fa-tv text-sky-400 text-lg"></i>
                                 <div>
-                                    <div class="text-white font-semibold">스마트 가전/TV</div>
+                                    <div class="text-white font-bold">스마트 가전/TV</div>
                                     <div class="text-slate-400 text-[11px]">삼성/LG/일렉트로룩스</div>
                                 </div>
                             </div>
-                            <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center gap-3">
+                            <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700/80 flex items-center gap-3">
                                 <i class="fa-solid fa-spa text-emerald-400 text-lg"></i>
                                 <div>
-                                    <div class="text-white font-semibold">헬스케어 솔루션</div>
+                                    <div class="text-white font-bold">헬스케어 솔루션</div>
                                     <div class="text-slate-400 text-[11px]">브람스/SAFA 특판</div>
                                 </div>
                             </div>
-                            <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center gap-3">
+                            <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700/80 flex items-center gap-3">
                                 <i class="fa-solid fa-gift text-purple-400 text-lg"></i>
                                 <div>
-                                    <div class="text-white font-semibold">프리미엄 기프트</div>
+                                    <div class="text-white font-bold">프리미엄 기프트</div>
                                     <div class="text-slate-400 text-[11px]">베르만/스위스밀리터리</div>
                                 </div>
                             </div>
-                            <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center gap-3">
+                            <div class="p-3 rounded-xl bg-slate-800/90 border border-slate-700/80 flex items-center gap-3">
                                 <i class="fa-solid fa-lightbulb text-amber-400 text-lg"></i>
                                 <div>
-                                    <div class="text-white font-semibold">자체 R&D 머신</div>
-                                    <div class="text-slate-400 text-[11px]">친환경 뻥튀기기계 특허</div>
+                                    <div class="text-white font-bold">자체 R&D 머신</div>
+                                    <div class="text-slate-400 text-[11px]">친환경 뻥튀기머신 특허</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
-                            <span><i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i> 과기정통부 연구개발전담부서 인정</span>
-                            <span class="text-sky-400 font-semibold">용산 서울지사 관할</span>
+                        <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+                            <span><i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i> 과기정통부 연구개발전담부서 인증</span>
+                            <span class="text-sky-400 font-bold">용산 서울지사 직속</span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- 회사 개요 & 비전 & 대표 인사말 (About Us) -->
+    <!-- 회사 개요 & 비전 & 디지털 명함 (About Us) -->
     <section id="about" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- 섹션 헤더 -->
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full uppercase tracking-wider">01 ABOUT US</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+                <span class="text-xs font-bold text-sky-600 bg-sky-50 px-3.5 py-1.5 rounded-full uppercase tracking-wider">01 ABOUT US</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3.5">
                     뿌리가 튼튼한 나무처럼, <br class="hidden sm:inline">
-                    <span class="text-sky-600">신뢰와 실력</span>으로 함께하는 든든한 파트너
+                    <span class="text-sky-600">신뢰와 실력</span>으로 보답하는 최고의 파트너
                 </h2>
                 <div class="w-16 h-1 bg-sky-600 mx-auto mt-4 rounded-full"></div>
                 <p class="text-slate-600 mt-4 leading-relaxed text-base">
-                    화려하게 피고 지는 한 계절의 꽃보다는, 사계절 내내 푸른 그늘을 드리우고 알찬 결실로 보답하는 나무가 되겠습니다. 
-                    (주)청림글로비즈는 전자랜드 사내벤처 역량에서 출발하여 혁신적인 B2B 유통망을 선도합니다.
+                    화려하게 피고 지는 한 계절의 꽃보다는, 사계절 내내 푸른 그늘로 쉼터를 만들고 알찬 결실로 보답하는 기업이 되겠습니다. 
+                    (주)청림글로비즈는 전자랜드 사내벤처로 시작하여 고객사의 환경에 맞춘 최적화된 B2B 유통을 실현합니다.
                 </p>
             </div>
 
-            <!-- 2컬럼 레이아웃: 회사 프로필 + 대표 명함 인터랙션 카드 -->
+            <!-- 회사 팩트시트 + 대표자 명함 카드 인터랙션 -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                <!-- 회사 기본 프로필 표 & 핵심 가치 -->
-                <div class="lg:col-span-7 bg-slate-50 border border-slate-200/80 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                <!-- 회사 현황 카드 -->
+                <div class="lg:col-span-7 bg-slate-50 border border-slate-200/90 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-200">
-                            <div class="w-10 h-10 rounded-lg bg-sky-600 text-white flex items-center justify-center text-lg">
+                            <div class="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center text-lg shadow-md">
                                 <i class="fa-solid fa-building-circle-check"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-slate-900 text-lg sm:text-xl">(주)청림글로비즈 기업 현황</h3>
-                                <p class="text-xs text-slate-500">Corporate Overview & Factsheet</p>
+                                <h3 class="font-extrabold text-slate-900 text-lg sm:text-xl">(주)청림글로비즈 기업 개요</h3>
+                                <p class="text-xs text-slate-500">Corporate Factsheet & Status</p>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                            <div class="p-3.5 bg-white rounded-xl border border-slate-200/60 shadow-sm">
+                            <div class="p-4 bg-white rounded-2xl border border-slate-200/70 shadow-sm">
                                 <span class="text-slate-400 text-xs block mb-1">법인명</span>
-                                <span class="font-bold text-slate-800">㈜청림글로비즈 (CHEONG LIM Globiz)</span>
+                                <span class="font-bold text-slate-900">㈜청림글로비즈 (CHEONG LIM Globiz)</span>
                             </div>
-                            <div class="p-3.5 bg-white rounded-xl border border-slate-200/60 shadow-sm">
+                            <div class="p-4 bg-white rounded-2xl border border-slate-200/70 shadow-sm">
                                 <span class="text-slate-400 text-xs block mb-1">대표이사</span>
-                                <span class="font-bold text-slate-800">백 동 욱 (Dong-wook Baek)</span>
+                                <span class="font-bold text-slate-900">백 동 욱 (Dong-wook Baek)</span>
                             </div>
-                            <div class="p-3.5 bg-white rounded-xl border border-slate-200/60 shadow-sm">
-                                <span class="text-slate-400 text-xs block mb-1">설립일 / 법인형태</span>
-                                <span class="font-bold text-slate-800">2024년 10월 / 전자랜드 사내벤처 출발</span>
+                            <div class="p-4 bg-white rounded-2xl border border-slate-200/70 shadow-sm">
+                                <span class="text-slate-400 text-xs block mb-1">설립 배경</span>
+                                <span class="font-bold text-slate-900">2024년 10월 설립 / 전자랜드 사내벤처 출발</span>
                             </div>
-                            <div class="p-3.5 bg-white rounded-xl border border-slate-200/60 shadow-sm">
-                                <span class="text-slate-400 text-xs block mb-1">거래 규모 (2025)</span>
-                                <span class="font-bold text-sky-600">약 15억원 돌파 (30여 협력사 납품)</span>
+                            <div class="p-4 bg-white rounded-2xl border border-slate-200/70 shadow-sm">
+                                <span class="text-slate-400 text-xs block mb-1">거래 규모 (2025 기준)</span>
+                                <span class="font-black text-sky-600">약 15억원 돌파 (30여 고객사)</span>
                             </div>
-                            <div class="p-3.5 bg-white rounded-xl border border-slate-200/60 shadow-sm sm:col-span-2">
+                            <div class="p-4 bg-white rounded-2xl border border-slate-200/70 shadow-sm sm:col-span-2">
                                 <span class="text-slate-400 text-xs block mb-1">주요 사업 영역</span>
-                                <span class="font-semibold text-slate-700">디지털 가전·IT B2B 특판, 헬스케어·가구·생활용품 커머스, 아이디어 전자제품 R&D</span>
+                                <span class="font-semibold text-slate-800">전자제품·가전·IT 판매 유통, 헬스케어·가구·생활용품 커머스, 아이디어 전자제품 R&D</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 3대 핵심 경쟁력 -->
+                    <!-- 3대 가치 뱃지 -->
                     <div class="mt-8 pt-6 border-t border-slate-200 grid grid-cols-3 gap-3 text-center">
-                        <div class="p-3 rounded-lg bg-sky-100/50">
+                        <div class="p-3.5 rounded-xl bg-sky-100/60">
                             <i class="fa-solid fa-handshake text-sky-700 text-lg mb-1"></i>
-                            <div class="font-bold text-xs text-slate-800">투명한 유통 구조</div>
-                            <div class="text-[11px] text-slate-500 mt-0.5">최저 단가 직납</div>
+                            <div class="font-bold text-xs text-slate-900">투명한 유통</div>
+                            <div class="text-[11px] text-slate-500 mt-0.5">직접 소싱 최저가</div>
                         </div>
-                        <div class="p-3 rounded-lg bg-emerald-100/50">
+                        <div class="p-3.5 rounded-xl bg-emerald-100/60">
                             <i class="fa-solid fa-truck-fast text-emerald-700 text-lg mb-1"></i>
-                            <div class="font-bold text-xs text-slate-800">신속 소싱 체계</div>
-                            <div class="text-[11px] text-slate-500 mt-0.5">전국 물류 인프라</div>
+                            <div class="font-bold text-xs text-slate-900">전국 직배송</div>
+                            <div class="text-[11px] text-slate-500 mt-0.5">안정적 납품망</div>
                         </div>
-                        <div class="p-3 rounded-lg bg-amber-100/50">
-                            <i class="fa-solid fa-flask text-amber-700 text-lg mb-1"></i>
-                            <div class="font-bold text-xs text-slate-800">자체 연구소 운영</div>
-                            <div class="text-[11px] text-slate-500 mt-0.5">특허 기술 확보</div>
+                        <div class="p-3.5 rounded-xl bg-purple-100/60">
+                            <i class="fa-solid fa-flask text-purple-700 text-lg mb-1"></i>
+                            <div class="font-bold text-xs text-slate-900">자체 연구소</div>
+                            <div class="text-[11px] text-slate-500 mt-0.5">특허 기술력 보유</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 대표자 명함 카드 인터랙션 (AJUNSTEEL 스타일 디지털 명함) -->
+                <!-- 디지털 CEO 명함 카드 -->
                 <div class="lg:col-span-5 flex flex-col justify-center">
-                    <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-sky-950 text-white rounded-3xl p-7 shadow-2xl relative overflow-hidden border border-slate-700">
-                        <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-sky-500/10 rounded-full blur-2xl pointer-events-none"></div>
-                        <div class="flex items-center justify-between pb-6 border-b border-slate-700">
+                    <div class="bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 text-white rounded-3xl p-7 sm:p-8 shadow-2xl relative overflow-hidden border border-slate-700/80">
+                        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                        
+                        <div class="flex items-center justify-between pb-6 border-b border-slate-800">
                             <div class="flex items-center gap-2.5">
-                                <span class="w-8 h-8 rounded-lg bg-sky-500 flex items-center justify-center font-black text-sm">CL</span>
+                                <span class="w-9 h-9 rounded-xl bg-sky-600 flex items-center justify-center font-black text-sm shadow-md shadow-sky-500/40">CL</span>
                                 <span class="font-extrabold tracking-wider text-base">청림글로비즈</span>
                             </div>
-                            <span class="text-xs uppercase bg-white/10 px-2.5 py-1 rounded text-sky-300 font-mono tracking-widest">CEO CARD</span>
+                            <span class="text-xs uppercase bg-white/10 px-3 py-1 rounded-full text-sky-300 font-mono tracking-widest">OFFICIAL CARD</span>
                         </div>
 
                         <div class="my-6">
-                            <span class="text-xs text-sky-400 font-bold uppercase tracking-wider block">Chief Executive Officer</span>
+                            <span class="text-xs text-sky-400 font-bold uppercase tracking-wider block">Representative Director</span>
                             <div class="text-2xl sm:text-3xl font-black mt-1 flex items-baseline gap-2">
                                 백 동 욱 <span class="text-sm font-normal text-slate-300">대표이사</span>
                             </div>
-                            <p class="text-xs text-slate-400 mt-2 font-mono">duback@etland.co.kr</p>
+                            <p class="text-xs text-slate-400 mt-2 font-mono flex items-center gap-1.5">
+                                <i class="fa-solid fa-envelope text-sky-400"></i> duback@etland.co.kr
+                            </p>
                         </div>
 
-                        <div class="space-y-2.5 text-xs text-slate-300 pt-4 border-t border-slate-700/70 font-light">
+                        <div class="space-y-3 text-xs text-slate-300 pt-4 border-t border-slate-800 font-light">
                             <div class="flex items-start gap-3">
                                 <i class="fa-solid fa-location-dot text-sky-400 mt-1"></i>
                                 <span><strong>본사 :</strong> 인천광역시 미추홀구 주염로73번길 54 제이원플렉스 523호</span>
@@ -398,16 +403,17 @@
                             </div>
                         </div>
 
-                        <div class="mt-6 pt-4 border-t border-slate-700/70 flex items-center justify-between">
-                            <span class="text-[11px] text-slate-400">www.cheonglimglobiz.com</span>
-                            <button onclick="copyBusinessCard()" class="px-3.5 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold flex items-center gap-1.5 transition">
+                        <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+                            <span class="text-[11px] text-slate-400 font-mono">www.cheonglimglobiz.com</span>
+                            <button onclick="copyBusinessCard()" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold flex items-center gap-1.5 transition shadow-md shadow-sky-600/30">
                                 <i class="fa-regular fa-copy"></i>
                                 <span id="copyBtnText">연락처 복사</span>
                             </button>
                         </div>
                     </div>
-                    <div id="copyAlert" class="hidden mt-3 p-3 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs rounded-xl text-center font-medium">
-                        <i class="fa-solid fa-check mr-1"></i> 대표이사 연락처 및 주소 정보가 클립보드에 복사되었습니다.
+                    
+                    <div id="copyAlert" class="hidden mt-3 p-3 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs rounded-2xl text-center font-bold">
+                        <i class="fa-solid fa-circle-check mr-1.5 text-emerald-600"></i> 대표이사 연락처 및 지사 주소가 클립보드에 복사되었습니다.
                     </div>
                 </div>
             </div>
@@ -418,9 +424,9 @@
     <section id="business" class="py-20 lg:py-28 bg-slate-50 border-y border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold text-sky-600 bg-sky-100 px-3 py-1 rounded-full uppercase tracking-wider">02 BUSINESS FIELDS</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
-                    고객의 환경에 맞춤 대응하는 <br class="hidden sm:inline">
+                <span class="text-xs font-bold text-sky-600 bg-sky-100 px-3.5 py-1.5 rounded-full uppercase tracking-wider">02 BUSINESS FIELDS</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3.5">
+                    고객의 요구와 환경에 맞춤 대응하는 <br class="hidden sm:inline">
                     <span class="text-sky-600">ONE-STOP B2B 솔루션</span>
                 </h2>
                 <div class="w-16 h-1 bg-sky-600 mx-auto mt-4 rounded-full"></div>
@@ -432,116 +438,116 @@
             <!-- 4대 카테고리 카드 그리드 -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- 1. 전자제품 & 디지털 IT -->
-                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between group">
                     <div>
                         <div class="w-14 h-14 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors shadow-sm">
                             <i class="fa-solid fa-laptop"></i>
                         </div>
                         <span class="text-[11px] font-bold text-sky-600 tracking-wider uppercase block">Electronics & IT</span>
-                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">가전 & 디지털 디바이스</h3>
+                        <h3 class="text-xl font-extrabold text-slate-900 mt-1 mb-3">가전 & 디지털 디바이스</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
                             대기업 정품 가전, 사무용 IT 디바이스, 빌트인 시스템 가전을 B2B 특판 전용 최저 단가로 신속 납품합니다.
                         </p>
                         <ul class="text-xs text-slate-500 space-y-1.5 font-medium border-t border-slate-100 pt-3">
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-sky-500"></i> TV, 냉장고, 세탁기 대량 납품</li>
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-sky-500"></i> 사무용 노트북·모니터·태블릿 소싱</li>
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-sky-500"></i> 공기청정기, 제습기, 계절가전</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-500"></i> TV, 냉장고, 세탁기 대량 납품</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-500"></i> 사무용 노트북·모니터·태블릿 소싱</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-500"></i> 공기청정기, 제습기, 계절가전</li>
                         </ul>
                     </div>
-                    <div class="mt-6 pt-3 text-sky-600 font-bold text-xs flex items-center gap-1">
-                        <span>취급 브랜드 : 삼성, LG, 위닉스 등</span>
+                    <div class="mt-6 pt-3 text-sky-600 font-bold text-xs flex items-center gap-1 border-t border-slate-100">
+                        <span>삼성, LG, 위닉스 등 공식 유통</span>
                     </div>
                 </div>
 
                 <!-- 2. 헬스케어 & 웰니스 -->
-                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between group">
                     <div>
                         <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-sm">
                             <i class="fa-solid fa-heart-pulse"></i>
                         </div>
                         <span class="text-[11px] font-bold text-emerald-600 tracking-wider uppercase block">Healthcare & Wellness</span>
-                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">헬스케어 기기</h3>
+                        <h3 class="text-xl font-extrabold text-slate-900 mt-1 mb-3">헬스케어 & 안마의자</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
                             임직원 복지몰, 기업 휴게실, 웰니스 프로그램에 필수적인 안마의자 및 가정용 건강보조 디바이스를 공급합니다.
                         </p>
                         <ul class="text-xs text-slate-500 space-y-1.5 font-medium border-t border-slate-100 pt-3">
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-500"></i> 프리미엄 안마의자 특판 납품</li>
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-500"></i> 마사지건, 스트레칭 매트, 온열기</li>
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-500"></i> 웰니스 헬스케어 가전 소싱</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 프리미엄 안마의자 특판 납품</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 마사지건, 스트레칭 매트, 온열기</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 웰니스 헬스케어 가전 소싱</li>
                         </ul>
                     </div>
-                    <div class="mt-6 pt-3 text-emerald-600 font-bold text-xs flex items-center gap-1">
-                        <span>취급 브랜드 : 브람스, SAFA 등</span>
+                    <div class="mt-6 pt-3 text-emerald-600 font-bold text-xs flex items-center gap-1 border-t border-slate-100">
+                        <span>브람스, SAFA 등 전문 특판</span>
                     </div>
                 </div>
 
                 <!-- 3. 생활용품 & 프리미엄 기프트 -->
-                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between group">
                     <div>
                         <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors shadow-sm">
                             <i class="fa-solid fa-gift"></i>
                         </div>
                         <span class="text-[11px] font-bold text-amber-600 tracking-wider uppercase block">Living & Gifts</span>
-                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">생활용품 & 특판기프트</h3>
+                        <h3 class="text-xl font-extrabold text-slate-900 mt-1 mb-3">생활용품 & 특판기프트</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
                             기업 창립기념일, 명절 특판, 프로모션용 프리미엄 주방웨어 및 글로벌 브랜드 기프트 상품을 원스톱으로 구성합니다.
                         </p>
                         <ul class="text-xs text-slate-500 space-y-1.5 font-medium border-t border-slate-100 pt-3">
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-500"></i> 독일 프리미엄 주방/식기 세트</li>
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-500"></i> 골프 용품 & 여행 캐리어 기프트</li>
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-500"></i> 기업 로고 인쇄 맞춤 패키지</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> 독일 프리미엄 주방/식기 세트</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> 골프 용품 & 여행 캐리어 기프트</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> 기업 로고 인쇄 맞춤 패키지</li>
                         </ul>
                     </div>
-                    <div class="mt-6 pt-3 text-amber-600 font-bold text-xs flex items-center gap-1">
-                        <span>베르만, 스위스밀리터리, 람보르기니 등</span>
+                    <div class="mt-6 pt-3 text-amber-600 font-bold text-xs flex items-center gap-1 border-t border-slate-100">
+                        <span>베르만, 스위스밀리터리, PGA 등</span>
                     </div>
                 </div>
 
                 <!-- 4. 아이디어 전자제품 R&D (자체 브랜드 CLG) -->
-                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between group">
+                <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between group">
                     <div>
                         <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors shadow-sm">
                             <i class="fa-solid fa-microchip"></i>
                         </div>
                         <span class="text-[11px] font-bold text-purple-600 tracking-wider uppercase block">R&D & Manufacturing</span>
-                        <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">신제품 개발 & 특허</h3>
+                        <h3 class="text-xl font-extrabold text-slate-900 mt-1 mb-3">신제품 개발 & 특허</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-                            기업부설연구소 주도로 시장 트렌드를 선도하는 친환경 소형 가전 및 아이디어 전자제품을 독자 연구·개발합니다.
+                            기업부설 연구전담부서 주도로 시장 트렌드를 선도하는 친환경 소형 가전 및 아이디어 전자제품을 독자 개발합니다.
                         </p>
                         <ul class="text-xs text-slate-500 space-y-1.5 font-medium border-t border-slate-100 pt-3">
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-purple-500"></i> 친환경 뻥튀기머신 특허 등록</li>
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-purple-500"></i> 자체 브랜드 CLG 라인업 전개</li>
-                            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-purple-500"></i> 특수 가전 OEM/ODM 개발 대응</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-500"></i> 친환경 뻥튀기머신 특허 등록</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-500"></i> 자체 브랜드 CLG 라인업 전개</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-500"></i> 특수 가전 OEM/ODM 개발 대응</li>
                         </ul>
                     </div>
-                    <div class="mt-6 pt-3 text-purple-600 font-bold text-xs flex items-center gap-1">
+                    <div class="mt-6 pt-3 text-purple-600 font-bold text-xs flex items-center gap-1 border-t border-slate-100">
                         <span>자체 브랜드 CLG / 사내벤처 기술력</span>
                     </div>
                 </div>
             </div>
 
-            <!-- 주요 납품 대상 채널 (폐쇄몰, 복지몰, 건설현장 등) 배너 -->
-            <div class="mt-12 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="space-y-1 text-center md:text-left">
-                    <h4 class="font-bold text-slate-900 text-lg">어떤 경로든 최적화된 납품 구조를 지원합니다</h4>
+            <!-- 주요 납품 채널 요약 바 -->
+            <div class="mt-12 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div class="space-y-1 text-center lg:text-left">
+                    <h4 class="font-extrabold text-slate-900 text-lg">어떤 경로든 최적화된 납품 구조를 지원합니다</h4>
                     <p class="text-slate-500 text-sm">임직원 복지몰 · 기업 폐쇄몰 · 공공기관 관공서 납품 · 기숙사 및 청년주택 완제품 세팅</p>
                 </div>
                 <div class="flex flex-wrap items-center justify-center gap-2">
-                    <span class="px-3.5 py-1.5 bg-slate-100 text-slate-700 font-semibold rounded-lg text-xs">임직원 복지몰 입점</span>
-                    <span class="px-3.5 py-1.5 bg-slate-100 text-slate-700 font-semibold rounded-lg text-xs">MRO 특판 납품</span>
-                    <span class="px-3.5 py-1.5 bg-slate-100 text-slate-700 font-semibold rounded-lg text-xs">신축 현장 가전 빌트인</span>
-                    <span class="px-3.5 py-1.5 bg-sky-600 text-white font-semibold rounded-lg text-xs">특판 견적 1:1 상담</span>
+                    <span class="px-3.5 py-1.5 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs">임직원 복지몰</span>
+                    <span class="px-3.5 py-1.5 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs">MRO 특판 납품</span>
+                    <span class="px-3.5 py-1.5 bg-slate-100 text-slate-700 font-bold rounded-xl text-xs">신축 현장 가전 빌트인</span>
+                    <span class="px-3.5 py-1.5 bg-sky-600 text-white font-bold rounded-xl text-xs shadow-sm">특판 견적 1:1 상담</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 공급 파트너 브랜드 (PARTNER BRANDS - PPT 헥사곤 구조 모티브) -->
+    <!-- 공급 파트너 브랜드 (PARTNER BRANDS) -->
     <section id="partners" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full uppercase tracking-wider">03 BRAND ALLIANCE</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+                <span class="text-xs font-bold text-sky-600 bg-sky-50 px-3.5 py-1.5 rounded-full uppercase tracking-wider">03 BRAND ALLIANCE</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3.5">
                     국내외 유수 브랜드와의 <span class="text-sky-600">공식 유통 네트워크</span>
                 </h2>
                 <div class="w-16 h-1 bg-sky-600 mx-auto mt-4 rounded-full"></div>
@@ -550,96 +556,84 @@
                 </p>
             </div>
 
-            <!-- 파트너 브랜드 카드 쇼케이스 -->
+            <!-- 파트너 브랜드 카드 쇼케이스 그리드 -->
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                <!-- 삼성전자 -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-sky-500 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-microchip text-3xl text-slate-700 group-hover:text-blue-600 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">SAMSUNG</span>
+                    <span class="font-black text-slate-900 text-sm">SAMSUNG</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">삼성전자 B2B</span>
                 </div>
 
-                <!-- LG전자 -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-rose-500 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-tv text-3xl text-slate-700 group-hover:text-rose-600 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">LG 전자</span>
+                    <span class="font-black text-slate-900 text-sm">LG 전자</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">LG Electronics</span>
                 </div>
 
-                <!-- 쿠쿠 CUCKOO -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-red-500 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-fire-burner text-3xl text-slate-700 group-hover:text-red-500 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">CUCKOO</span>
+                    <span class="font-black text-slate-900 text-sm">CUCKOO</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">쿠쿠 밥솥·주방가전</span>
                 </div>
 
-                <!-- 위닉스 WINIX -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-sky-500 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-wind text-3xl text-slate-700 group-hover:text-sky-500 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">WINIX</span>
+                    <span class="font-black text-slate-900 text-sm">WINIX</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">공기청정·제습가전</span>
                 </div>
 
-                <!-- 일렉트로룩스 Electrolux -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-blue-700 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-plug text-3xl text-slate-700 group-hover:text-blue-700 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">Electrolux</span>
+                    <span class="font-black text-slate-900 text-sm">Electrolux</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">글로벌 프리미엄 가전</span>
                 </div>
 
-                <!-- 린나이 Rinnai -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-red-600 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-temperature-arrow-up text-3xl text-slate-700 group-hover:text-red-600 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">Rinnai</span>
+                    <span class="font-black text-slate-900 text-sm">Rinnai</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">린나이 온수·난방</span>
                 </div>
 
-                <!-- 코웨이 coway -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-cyan-600 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-faucet-drip text-3xl text-slate-700 group-hover:text-cyan-600 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">COWAY</span>
+                    <span class="font-black text-slate-900 text-sm">COWAY</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">정수기·환경가전</span>
                 </div>
 
-                <!-- 브람스 BRAMS -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-amber-600 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-chair text-3xl text-slate-700 group-hover:text-amber-600 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">BRAMS</span>
+                    <span class="font-black text-slate-900 text-sm">BRAMS</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">프리미엄 안마의자</span>
                 </div>
 
-                <!-- 베르만 BERMAN GERMANY -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-slate-800 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-utensils text-3xl text-slate-700 group-hover:text-slate-900 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">BERMAN</span>
+                    <span class="font-black text-slate-900 text-sm">BERMAN</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">독일 명품 주방웨어</span>
                 </div>
 
-                <!-- SAFA HEALTHCARE -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-blue-500 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-suitcase-medical text-3xl text-slate-700 group-hover:text-blue-500 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">SAFA</span>
+                    <span class="font-black text-slate-900 text-sm">SAFA</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">헬스케어 디바이스</span>
                 </div>
 
-                <!-- PGA TOUR -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-emerald-600 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-golf-ball-tee text-3xl text-slate-700 group-hover:text-emerald-600 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">PGA TOUR</span>
+                    <span class="font-black text-slate-900 text-sm">PGA TOUR</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">골프 & 스포츠 기프트</span>
                 </div>
 
-                <!-- 스위스밀리터리 SWISS MILITARY -->
                 <div class="p-6 rounded-2xl border border-slate-200/90 hover:border-red-600 hover:shadow-lg transition-all flex flex-col items-center justify-center text-center bg-white group">
                     <i class="fa-solid fa-suitcase-rolling text-3xl text-slate-700 group-hover:text-red-600 transition-colors mb-3"></i>
-                    <span class="font-extrabold text-slate-800 text-sm tracking-tight">SWISS MILITARY</span>
+                    <span class="font-black text-slate-900 text-sm">SWISS MILITARY</span>
                     <span class="text-[11px] text-slate-400 mt-0.5">여행용품 & 리빙</span>
                 </div>
             </div>
 
-            <!-- 파트너십 하단 강조 문구 -->
-            <div class="mt-10 p-4 rounded-xl bg-slate-50 border border-slate-200/70 text-center text-xs text-slate-500 font-medium">
-                <i class="fa-solid fa-circle-info text-sky-600 mr-1.5"></i> 위 브랜드 외에도 기업 고객사의 요구 규격 및 예산에 맞춘 특수 품목의 추가 소싱이 실시간으로 가능합니다.
+            <!-- 하단 브랜드 안내 -->
+            <div class="mt-10 p-4 rounded-2xl bg-slate-50 border border-slate-200/70 text-center text-xs text-slate-500 font-medium">
+                <i class="fa-solid fa-circle-info text-sky-600 mr-1.5"></i> 위 브랜드 외에도 기업 고객사의 요구 스펙 및 예산에 맞춘 특수 품목의 소싱이 실시간으로 지원됩니다.
             </div>
         </div>
     </section>
@@ -648,8 +642,8 @@
     <section id="rnd" class="py-20 lg:py-28 bg-slate-900 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold text-sky-400 bg-sky-950 px-3 py-1 rounded-full uppercase tracking-wider border border-sky-800">04 R&D & CERTIFICATION</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+                <span class="text-xs font-bold text-sky-400 bg-sky-950 px-3.5 py-1.5 rounded-full uppercase tracking-wider border border-sky-800">04 R&D & CERTIFICATION</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3.5">
                     공인된 기술력과 <span class="text-gradient">자체 R&D 연구 역량</span>
                 </h2>
                 <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
@@ -660,31 +654,31 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- 인증 1: 기업부설연구소 / 연구개발전담부서 인정서 -->
-                <div class="bg-slate-800/80 border border-slate-700 rounded-3xl p-7 flex flex-col justify-between hover:border-sky-500 transition-colors">
+                <div class="bg-slate-800/80 border border-slate-700 rounded-3xl p-7 sm:p-8 flex flex-col justify-between hover:border-sky-500 transition-colors shadow-xl">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl mb-5">
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-xl mb-5 border border-sky-500/30">
                             <i class="fa-solid fa-award"></i>
                         </div>
                         <span class="text-xs font-bold text-sky-400 uppercase tracking-wider">과기정통부 인증</span>
-                        <h3 class="text-xl font-bold text-white mt-1 mb-3">연구개발전담부서 인정</h3>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-3">연구개발전담부서 인정서</h3>
                         <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
                             과학기술정보통신부 및 한국산업기술진흥협회(KOITA) 인증 사내 연구전담부서를 설립하여 차세대 소형가전 및 IoT 솔루션을 개발합니다.
                         </p>
-                        <div class="bg-slate-900/80 rounded-xl p-3 border border-slate-800 text-xs text-slate-400 space-y-1">
-                            <div>• 인정번호 : 제 2023157966 호</div>
-                            <div>• 법적근거 : 기초연구진흥 및 기술개발지원에 관한 법률</div>
-                            <div>• 전담부서명 : 연구개발부</div>
+                        <div class="bg-slate-900/80 rounded-2xl p-4 border border-slate-800 text-xs text-slate-400 space-y-1.5">
+                            <div>• <strong>인정번호 :</strong> 제 2023157966 호</div>
+                            <div>• <strong>법적근거 :</strong> 기초연구진흥 및 기술개발지원에 관한 법률</div>
+                            <div>• <strong>전담부서명 :</strong> 연구개발부</div>
                         </div>
                     </div>
-                    <div class="mt-6 pt-4 border-t border-slate-700 flex items-center text-xs text-emerald-400">
-                        <i class="fa-solid fa-check-circle mr-1.5"></i> 공식 인증 획득
+                    <div class="mt-6 pt-4 border-t border-slate-700/80 flex items-center text-xs text-emerald-400 font-bold">
+                        <i class="fa-solid fa-circle-check mr-2"></i> 과기정통부 공식 인정 획득
                     </div>
                 </div>
 
                 <!-- 인증 2: 직접생산확인증명서 -->
-                <div class="bg-slate-800/80 border border-slate-700 rounded-3xl p-7 flex flex-col justify-between hover:border-sky-500 transition-colors">
+                <div class="bg-slate-800/80 border border-slate-700 rounded-3xl p-7 sm:p-8 flex flex-col justify-between hover:border-sky-500 transition-colors shadow-xl">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-5">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-5 border border-emerald-500/30">
                             <i class="fa-solid fa-certificate"></i>
                         </div>
                         <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">중소벤처기업부 확인</span>
@@ -692,21 +686,21 @@
                         <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
                             중소기업유통센터를 통해 공학연구 및 기술기반 서비스, 정보시스템 유지관리 및 인프라 구축 역량을 공식 인증받았습니다.
                         </p>
-                        <div class="bg-slate-900/80 rounded-xl p-3 border border-slate-800 text-xs text-slate-400 space-y-1">
-                            <div>• 증명서번호 : 제 2023-0514-04605 호</div>
-                            <div>• 관련법률 : 중소기업제품 구매촉진 및 판로지원 법률</div>
-                            <div>• 공공기관 및 관공서 수의계약/입찰 적격 증빙</div>
+                        <div class="bg-slate-900/80 rounded-2xl p-4 border border-slate-800 text-xs text-slate-400 space-y-1.5">
+                            <div>• <strong>증명서번호 :</strong> 제 2023-0514-04605 호</div>
+                            <div>• <strong>관련법률 :</strong> 중소기업제품 구매촉진 및 판로지원 법률</div>
+                            <div>• <strong>공공입찰 :</strong> 관공서 수의계약 및 나라장터 적격 입찰 자격</div>
                         </div>
                     </div>
-                    <div class="mt-6 pt-4 border-t border-slate-700 flex items-center text-xs text-emerald-400">
-                        <i class="fa-solid fa-check-circle mr-1.5"></i> 공공구매 적격 증빙 완료
+                    <div class="mt-6 pt-4 border-t border-slate-700/80 flex items-center text-xs text-emerald-400 font-bold">
+                        <i class="fa-solid fa-circle-check mr-2"></i> 공공구매 적격 증빙 완료
                     </div>
                 </div>
 
                 <!-- 인증 3: 친환경 뻥튀기머신 특허 및 자체 브랜드 CLG -->
-                <div class="bg-slate-800/80 border border-slate-700 rounded-3xl p-7 flex flex-col justify-between hover:border-sky-500 transition-colors">
+                <div class="bg-slate-800/80 border border-slate-700 rounded-3xl p-7 sm:p-8 flex flex-col justify-between hover:border-sky-500 transition-colors shadow-xl">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-5">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-5 border border-amber-500/30">
                             <i class="fa-solid fa-lightbulb"></i>
                         </div>
                         <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">신기술 특허 & 자체 브랜드</span>
@@ -714,26 +708,26 @@
                         <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
                             자체 브랜드 <strong>CLG</strong>를 출범하여, 무소음·무연기 친환경 팝핑 머신을 개발하고 특허를 등록하여 시장 출시를 준비 중입니다.
                         </p>
-                        <div class="bg-slate-900/80 rounded-xl p-3 border border-slate-800 text-xs text-slate-400 space-y-1">
-                            <div>• 핵심기술 : 친환경 무연 팝핑 히팅 메커니즘</div>
-                            <div>• 적용분야 : 카페, 학교, 매장, 해외 수출 모델</div>
-                            <div>• 자체 브랜드 : CLG (Cheong Lim Globiz)</div>
+                        <div class="bg-slate-900/80 rounded-2xl p-4 border border-slate-800 text-xs text-slate-400 space-y-1.5">
+                            <div>• <strong>핵심기술 :</strong> 친환경 무연 팝핑 히팅 메커니즘 특허</div>
+                            <div>• <strong>적용분야 :</strong> 카페, 프랜차이즈 매장, 학교, 해외 수출</div>
+                            <div>• <strong>자체 브랜드 :</strong> CLG (Cheong Lim Globiz)</div>
                         </div>
                     </div>
-                    <div class="mt-6 pt-4 border-t border-slate-700 flex items-center text-xs text-amber-400">
-                        <i class="fa-solid fa-file-signature mr-1.5"></i> 특허 등록 및 양산 준비
+                    <div class="mt-6 pt-4 border-t border-slate-700/80 flex items-center text-xs text-amber-400 font-bold">
+                        <i class="fa-solid fa-file-signature mr-2"></i> 특허 등록 및 독점 양산 준비
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 주요 연혁 및 납품 실적 (05 HISTORY & TRACK RECORD) -->
+    <!-- 주요 연혁 및 납품 실적 (05 TRACK RECORD) -->
     <section id="history" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full uppercase tracking-wider">05 TRACK RECORD</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+                <span class="text-xs font-bold text-sky-600 bg-sky-50 px-3.5 py-1.5 rounded-full uppercase tracking-wider">05 TRACK RECORD</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3.5">
                     신뢰로 쌓아올린 <span class="text-sky-600">성장 스토리와 실적</span>
                 </h2>
                 <div class="w-16 h-1 bg-sky-600 mx-auto mt-4 rounded-full"></div>
@@ -742,18 +736,17 @@
                 </p>
             </div>
 
-            <!-- 타임라인 구조 -->
+            <!-- 타임라인 -->
             <div class="max-w-4xl mx-auto relative pl-6 sm:pl-10 border-l-2 border-sky-200 space-y-12">
                 <!-- 2026 -->
                 <div class="relative group">
-                    <!-- 타임라인 포인트 -->
                     <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-7 h-7 rounded-full bg-sky-600 border-4 border-white shadow-md flex items-center justify-center text-white text-[11px] font-bold">
                         <i class="fa-solid fa-check"></i>
                     </div>
-                    <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 sm:p-7 hover:border-sky-300 transition-colors">
+                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-7 hover:border-sky-300 transition-colors">
                         <div class="flex items-baseline justify-between mb-2">
                             <span class="text-2xl font-black text-sky-700">2026</span>
-                            <span class="text-xs bg-sky-100 text-sky-800 font-bold px-2.5 py-0.5 rounded-full">도약과 확장</span>
+                            <span class="text-xs bg-sky-100 text-sky-800 font-bold px-3 py-1 rounded-full">도약과 확장</span>
                         </div>
                         <h3 class="text-lg font-bold text-slate-900 mb-3">주요 MRO 및 대기업 건설 현장 납품 체결</h3>
                         <ul class="text-slate-600 text-sm space-y-2">
@@ -782,10 +775,10 @@
                     <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-7 h-7 rounded-full bg-blue-500 border-4 border-white shadow-md flex items-center justify-center text-white text-[11px]">
                         <i class="fa-solid fa-building"></i>
                     </div>
-                    <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 sm:p-7 hover:border-blue-300 transition-colors">
+                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-7 hover:border-blue-300 transition-colors">
                         <div class="flex items-baseline justify-between mb-2">
                             <span class="text-2xl font-black text-blue-600">2025</span>
-                            <span class="text-xs bg-blue-100 text-blue-800 font-bold px-2.5 py-0.5 rounded-full">인프라 구축 & 실적 15억 달성</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full">인프라 구축 & 실적 15억 돌파</span>
                         </div>
                         <h3 class="text-lg font-bold text-slate-900 mb-3">B2B 파트너십 고도화 및 기술인증</h3>
                         <ul class="text-slate-600 text-sm space-y-2">
@@ -814,10 +807,10 @@
                     <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-7 h-7 rounded-full bg-slate-400 border-4 border-white shadow-md flex items-center justify-center text-white text-[11px]">
                         <i class="fa-solid fa-flag"></i>
                     </div>
-                    <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 sm:p-7 hover:border-slate-300 transition-colors">
+                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-7 hover:border-slate-300 transition-colors">
                         <div class="flex items-baseline justify-between mb-2">
                             <span class="text-2xl font-black text-slate-700">2024</span>
-                            <span class="text-xs bg-slate-200 text-slate-700 font-bold px-2.5 py-0.5 rounded-full">사내벤처 창업 & 설립</span>
+                            <span class="text-xs bg-slate-200 text-slate-700 font-bold px-3 py-1 rounded-full">사내벤처 창업 & 설립</span>
                         </div>
                         <h3 class="text-lg font-bold text-slate-900 mb-3">(주)청림글로비즈 법인 설립</h3>
                         <ul class="text-slate-600 text-sm space-y-2">
@@ -840,12 +833,12 @@
         </div>
     </section>
 
-    <!-- 실시간 B2B 대량 견적 계산기 & RFQ 신청 (B2B QUOTATION SIMULATOR) -->
+    <!-- 실시간 B2B 대량 구매 견적 계산기 & RFQ 신청 (B2B QUOTATION SIMULATOR) -->
     <section id="rfq" class="py-20 lg:py-28 bg-gradient-to-b from-slate-50 to-sky-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold text-sky-600 bg-white px-3 py-1 rounded-full uppercase tracking-wider border border-sky-200 shadow-sm">B2B RFQ ESTIMATOR</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+                <span class="text-xs font-bold text-sky-600 bg-white px-3.5 py-1.5 rounded-full uppercase tracking-wider border border-sky-200 shadow-sm">B2B RFQ ESTIMATOR</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3.5">
                     실시간 B2B 대량 구매 <span class="text-sky-600">견적 시뮬레이션</span>
                 </h2>
                 <div class="w-16 h-1 bg-sky-600 mx-auto mt-4 rounded-full"></div>
@@ -867,22 +860,22 @@
                         <div>
                             <label class="block text-xs font-bold text-slate-700 uppercase mb-2">1. 품목 카테고리 선택</label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                                <label class="border border-slate-200 rounded-xl p-3 text-center cursor-pointer hover:border-sky-500 transition-all block has-[:checked]:bg-sky-50 has-[:checked]:border-sky-600 has-[:checked]:text-sky-700">
+                                <label class="border border-slate-200 rounded-2xl p-3 text-center cursor-pointer hover:border-sky-500 transition-all block has-[:checked]:bg-sky-50 has-[:checked]:border-sky-600 has-[:checked]:text-sky-700">
                                     <input type="radio" name="itemCategory" value="appliance" class="sr-only" checked onchange="calculateEstimate()">
                                     <i class="fa-solid fa-tv text-base block mb-1"></i>
                                     <span class="text-xs font-bold">대형/일반가전</span>
                                 </label>
-                                <label class="border border-slate-200 rounded-xl p-3 text-center cursor-pointer hover:border-sky-500 transition-all block has-[:checked]:bg-sky-50 has-[:checked]:border-sky-600 has-[:checked]:text-sky-700">
+                                <label class="border border-slate-200 rounded-2xl p-3 text-center cursor-pointer hover:border-sky-500 transition-all block has-[:checked]:bg-sky-50 has-[:checked]:border-sky-600 has-[:checked]:text-sky-700">
                                     <input type="radio" name="itemCategory" value="it" class="sr-only" onchange="calculateEstimate()">
                                     <i class="fa-solid fa-laptop text-base block mb-1"></i>
                                     <span class="text-xs font-bold">IT/사무기기</span>
                                 </label>
-                                <label class="border border-slate-200 rounded-xl p-3 text-center cursor-pointer hover:border-sky-500 transition-all block has-[:checked]:bg-sky-50 has-[:checked]:border-sky-600 has-[:checked]:text-sky-700">
+                                <label class="border border-slate-200 rounded-2xl p-3 text-center cursor-pointer hover:border-sky-500 transition-all block has-[:checked]:bg-sky-50 has-[:checked]:border-sky-600 has-[:checked]:text-sky-700">
                                     <input type="radio" name="itemCategory" value="health" class="sr-only" onchange="calculateEstimate()">
                                     <i class="fa-solid fa-heart-pulse text-base block mb-1"></i>
                                     <span class="text-xs font-bold">헬스케어</span>
                                 </label>
-                                <label class="border border-slate-200 rounded-xl p-3 text-center cursor-pointer hover:border-sky-500 transition-all block has-[:checked]:bg-sky-50 has-[:checked]:border-sky-600 has-[:checked]:text-sky-700">
+                                <label class="border border-slate-200 rounded-2xl p-3 text-center cursor-pointer hover:border-sky-500 transition-all block has-[:checked]:bg-sky-50 has-[:checked]:border-sky-600 has-[:checked]:text-sky-700">
                                     <input type="radio" name="itemCategory" value="gift" class="sr-only" onchange="calculateEstimate()">
                                     <i class="fa-solid fa-gift text-base block mb-1"></i>
                                     <span class="text-xs font-bold">판촉/기프트</span>
@@ -896,11 +889,11 @@
                                 <label class="text-xs font-bold text-slate-700 uppercase">2. 예상 도입 수량</label>
                                 <span class="text-sm font-extrabold text-sky-600"><span id="qtyDisplay">25</span> 대(개)</span>
                             </div>
-                            <input type="range" id="qtyRange" min="5" max="300" step="5" value="25" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-600" oninput="updateQty(this.value)">
+                            <input type="range" id="qtyRange" min="5" max="300" step="5" value="25" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-600" oninput="updateQty(this.value)">
                             <div class="flex justify-between text-[11px] text-slate-400 mt-1">
                                 <span>5개 (소량 특판)</span>
                                 <span>100개 (대량 특판)</span>
-                                <span>300개 이상 (초특가)</span>
+                                <span>300개 이상 (프로젝트 초특가)</span>
                             </div>
                         </div>
 
@@ -933,18 +926,18 @@
                         <!-- 신청자 연락처 정보 -->
                         <div class="pt-4 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                                <label class="block text-xs font-medium text-slate-700 mb-1">회사명 / 담당자명 *</label>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">회사명 / 담당자명 *</label>
                                 <input type="text" id="clientName" required placeholder="예: (주)한국테크 / 홍길동 팀장" class="w-full text-xs bg-slate-50 border border-slate-300 rounded-xl p-3 focus:ring-2 focus:ring-sky-500">
                             </div>
                             <div>
-                                <label class="block text-xs font-medium text-slate-700 mb-1">연락처 (휴대전화) *</label>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">연락처 (휴대전화) *</label>
                                 <input type="tel" id="clientPhone" required placeholder="예: 010-1234-5678" class="w-full text-xs bg-slate-50 border border-slate-300 rounded-xl p-3 focus:ring-2 focus:ring-sky-500">
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-xs font-medium text-slate-700 mb-1">상세 문의 / 필요 모델명 (선택)</label>
-                            <textarea id="clientNotes" rows="2" placeholder="필요 규격, 배송 희망 일정, 설치 유무 등을 적어주시면 정확한 B2B 특별 견적을 안내해 드립니다." class="w-full text-xs bg-slate-50 border border-slate-300 rounded-xl p-3 focus:ring-2 focus:ring-sky-500"></textarea>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">상세 문의 / 필요 모델명 (선택)</label>
+                            <textarea id="clientNotes" rows="2" placeholder="필요 규격, 배송 희망 일정, 설치 유무 등을 적어주시면 정확한 B2B 특별 견적을 신속히 안내해 드립니다." class="w-full text-xs bg-slate-50 border border-slate-300 rounded-xl p-3 focus:ring-2 focus:ring-sky-500"></textarea>
                         </div>
 
                         <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 text-white font-extrabold text-sm sm:text-base shadow-lg shadow-sky-600/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
@@ -974,11 +967,11 @@
                                 <span id="estQtyText" class="font-bold text-white">25 대</span>
                             </div>
                             <div class="flex justify-between items-center text-slate-400">
-                                <span>B2B 기본 시중가 대비 할인율 :</span>
-                                <span id="estDiscountText" class="font-bold text-emerald-400 text-base">최대 22% OFF</span>
+                                <span>B2B 시중가 대비 할인율 :</span>
+                                <span id="estDiscountText" class="font-black text-emerald-400 text-base">최대 22% OFF</span>
                             </div>
                             <div class="flex justify-between items-center text-slate-400">
-                                <span>배송 및 납품 방식 :</span>
+                                <span>배송 및 물류 체계 :</span>
                                 <span class="font-semibold text-white">본사 직배송 / 현장 직배송</span>
                             </div>
                         </div>
@@ -1002,7 +995,7 @@
         </div>
     </section>
 
-    <!-- 모달: 견적 신청 완료 안내 모달 -->
+    <!-- 모달: 견적 신청 완료 안내 팝업 -->
     <div id="rfqSuccessModal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-md w-full p-7 text-center shadow-2xl border border-slate-100 transform transition-all">
             <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto mb-4">
@@ -1012,22 +1005,23 @@
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
                 입력해주신 연락처로 <strong>(주)청림글로비즈 B2B 전담팀</strong>에서 최적 단가 비교 견적서를 확인 후 신속하게 연락드리겠습니다.
             </p>
-            <div class="p-3 bg-slate-50 rounded-xl text-left text-xs text-slate-600 mb-6 space-y-1">
-                <div>• 접수 이메일 : <span class="font-bold text-sky-700">duback@etland.co.kr</span></div>
-                <div>• 서울지사 유선 : <span class="font-bold text-slate-800">02-706-0305</span></div>
+            <div class="p-3.5 bg-slate-50 rounded-2xl text-left text-xs text-slate-600 mb-6 space-y-1.5">
+                <div>• <strong>접수 이메일 :</strong> <span class="font-bold text-sky-700">duback@etland.co.kr</span></div>
+                <div>• <strong>서울지사 유선 :</strong> <span class="font-bold text-slate-900">02-706-0305</span></div>
+                <div>• <strong>대표 직통 :</strong> <span class="font-bold text-slate-900">010-8739-1663</span></div>
             </div>
-            <button onclick="closeModal()" class="w-full py-3 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm transition">
+            <button onclick="closeModal()" class="w-full py-3.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm transition">
                 확인
             </button>
         </div>
     </div>
 
-    <!-- 오시는 길 및 지사 안내 (LOCATION & NETWORK) -->
+    <!-- 오시는 길 및 지사 안내 (06 LOCATION & NETWORK) -->
     <section id="contact" class="py-20 lg:py-28 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold text-sky-600 bg-sky-50 px-3 py-1 rounded-full uppercase tracking-wider">06 LOCATION & NETWORK</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">
+                <span class="text-xs font-bold text-sky-600 bg-sky-50 px-3.5 py-1.5 rounded-full uppercase tracking-wider">06 LOCATION & NETWORK</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3.5">
                     오시는 길 및 <span class="text-sky-600">지사 네트워크</span>
                 </h2>
                 <div class="w-16 h-1 bg-sky-600 mx-auto mt-4 rounded-full"></div>
@@ -1038,7 +1032,7 @@
 
             <!-- 지사 탭 스위처 -->
             <div class="flex justify-center mb-8">
-                <div class="inline-flex p-1 rounded-2xl bg-slate-100 border border-slate-200">
+                <div class="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200">
                     <button id="tabHeadOfficeBtn" onclick="switchLocation('head')" class="px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-white text-sky-600 shadow-sm transition">
                         <i class="fa-solid fa-building mr-1.5"></i> 인천 본사
                     </button>
@@ -1091,20 +1085,23 @@
                         </div>
                     </div>
 
-                    <div class="mt-8 pt-6 border-t border-slate-200 flex flex-wrap gap-2">
-                        <a id="naverMapLink" href="https://map.naver.com" target="_blank" class="flex-1 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs text-center transition flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-map-location-dot"></i>
-                            <span>네이버 지도</span>
+                    <!-- 지도 바로가기 버튼 링크 -->
+                    <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+                        <a id="naverMapLink" href="https://map.naver.com/v5/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%AF%B8%EC%B6%94%ED%99%80%EA%B5%AC%20%EC%A3%BC%EC%97%BC%EB%A1%9C73%EB%B2%88%EA%B8%B8%2054" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white font-bold text-xs sm:text-sm text-center transition shadow-sm flex items-center justify-center gap-2 group">
+                            <span class="font-black bg-white text-[#03C75A] rounded px-1.5 py-0.5 text-xs group-hover:scale-105 transition-transform">N</span>
+                            <span id="naverMapBtnText">인천본사 네이버 지도 열기</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[11px] opacity-80"></i>
                         </a>
-                        <a id="kakaoMapLink" href="https://map.kakao.com" target="_blank" class="flex-1 py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold text-xs text-center transition flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-location-arrow"></i>
-                            <span>카카오 맵</span>
+                        <a id="kakaoMapLink" href="https://map.kakao.com/link/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%AF%B8%EC%B6%94%ED%99%80%EA%B5%AC%20%EC%A3%BC%EC%97%BC%EB%A1%9C73%EB%B2%88%EA%B8%B8%2054%20%EC%A0%9C%EC%9D%B4%EC%9B%90%ED%94%8C%EB%A0%89%EC%8A%A4" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-[#FEE500] hover:bg-[#edd500] text-[#191919] font-bold text-xs sm:text-sm text-center transition shadow-sm flex items-center justify-center gap-2 group">
+                            <i class="fa-solid fa-comment text-amber-950 group-hover:scale-105 transition-transform"></i>
+                            <span id="kakaoMapBtnText">인천본사 카카오맵 열기</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[11px] opacity-70"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- 우측 모던 맵 플레이스홀더 비주얼 -->
-                <div class="lg:col-span-7 bg-slate-900 rounded-3xl overflow-hidden relative min-h-[340px] border border-slate-800 flex flex-col items-center justify-center p-8 text-center">
+                <div class="lg:col-span-7 bg-slate-900 rounded-3xl overflow-hidden relative min-h-[340px] border border-slate-800 flex flex-col items-center justify-center p-8 text-center shadow-xl">
                     <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
                     <div class="w-16 h-16 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-3xl mb-4 z-10 border border-sky-400/30">
                         <i id="mapPinIcon" class="fa-solid fa-map-pin"></i>
@@ -1141,7 +1138,7 @@
                         (주)청림글로비즈는 전자랜드 B2B 사내벤처로 시작하여 대기업 가전, IT 장비, 헬스케어 디바이스 및 자체 특허 신제품을 유통·공급하는 전문 기업입니다. 
                         고객사의 신뢰를 최우선으로 투명하고 경쟁력 있는 B2B 솔루션을 제공합니다.
                     </p>
-                    <div class="flex items-center gap-3 text-sm text-slate-300">
+                    <div class="flex items-center gap-2.5 text-sm text-slate-300">
                         <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-800 text-[11px]">사업자등록 완료</span>
                         <span class="px-2.5 py-1 bg-slate-900 rounded border border-slate-800 text-[11px]">전자랜드 공식 파트너</span>
                     </div>
@@ -1179,7 +1176,7 @@
                         <div>평일 09:00 - 18:00</div>
                         <div>이메일: duback@etland.co.kr</div>
                         <div class="pt-2">
-                            <a href="#rfq" class="inline-block px-3 py-1.5 rounded-lg bg-sky-600 text-white font-bold text-xs hover:bg-sky-500 transition">
+                            <a href="#rfq" class="inline-block px-3.5 py-2 rounded-xl bg-sky-600 text-white font-bold text-xs hover:bg-sky-500 transition">
                                 B2B 견적 문의 바로가기
                             </a>
                         </div>
@@ -1200,7 +1197,7 @@
         </div>
     </footer>
 
-    <!-- 자바스크립트 로직 -->
+    <!-- 인터랙션 자바스크립트 로직 -->
     <script>
         // 모바일 메뉴 토글
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -1210,7 +1207,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // 모바일 링크 클릭 시 메뉴 닫기
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -1242,7 +1238,7 @@
             }
         }
 
-        // 실시간 견적 시뮬레이터 로직
+        // 견적 시뮬레이터 로직
         function updateQty(val) {
             document.getElementById('qtyDisplay').innerText = val;
             document.getElementById('estQtyText').innerText = `${val} 대(개)`;
@@ -1254,7 +1250,6 @@
             const qty = parseInt(document.getElementById('qtyRange').value, 10);
             const dest = document.getElementById('destType').value;
 
-            // 카테고리 텍스트
             const catMap = {
                 'appliance': '대형/일반가전 (삼성/LG/일렉트로룩스 등)',
                 'it': 'IT/사무기기 (노트북/모니터/태블릿)',
@@ -1263,7 +1258,6 @@
             };
             document.getElementById('estCatText').innerText = catMap[category] || '일반가전';
 
-            // 할인율 계산 모델
             let discountRate = 15;
             if (qty >= 150) {
                 discountRate = 32;
@@ -1274,12 +1268,11 @@
             }
 
             if (dest === 'construction' || dest === 'housing') {
-                discountRate += 3; // 건설/주택 대량 현장 가산 할인
+                discountRate += 3;
             }
 
             document.getElementById('estDiscountText').innerText = `최대 ${discountRate}% OFF 특별단가`;
 
-            // 가이드 문구
             const tierGuide = document.getElementById('estTierGuide');
             if (qty >= 100) {
                 tierGuide.innerText = "프로젝트 독점 최우선 VIP 특별가";
@@ -1300,7 +1293,6 @@
                 return;
             }
 
-            // 모달 열기
             document.getElementById('rfqSuccessModal').classList.remove('hidden');
         }
 
@@ -1310,38 +1302,63 @@
             updateQty(25);
         }
 
+        // 본사 및 서울지사 지도 링크 데이터
+        const locationData = {
+            head: {
+                badge: "HEAD OFFICE",
+                title: "㈜청림글로비즈 인천 본사",
+                addr: "인천광역시 미추홀구 주염로73번길 54 제이원플렉스 523호 (주안동)",
+                phone: "02-706-0305 / 010-8739-1663 (대표 직통)",
+                mapPinTitle: "인천광역시 미추홀구 주염로73번길 54",
+                mapPinSub: "제이원플렉스 523호 / 대중교통 및 주차 완비",
+                naverMap: "https://map.naver.com/v5/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%AF%B8%EC%B6%94%ED%99%80%EA%B5%AC%20%EC%A3%BC%EC%97%BC%EB%A1%9C73%EB%B2%88%EA%B8%B8%2054",
+                kakaoMap: "https://map.kakao.com/link/search/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%AF%B8%EC%B6%94%ED%99%80%EA%B5%AC%20%EC%A3%BC%EC%97%BC%EB%A1%9C73%EB%B2%88%EA%B8%B8%2054%20%EC%A0%9C%EC%9D%B4%EC%9B%90%ED%94%8C%EB%A0%89%EC%8A%A4",
+                naverBtn: "인천본사 네이버 지도 열기",
+                kakaoBtn: "인천본사 카카오맵 열기"
+            },
+            seoul: {
+                badge: "SEOUL BRANCH & PARTNER OFFICE",
+                title: "㈜청림글로비즈 서울지사 (전자랜드)",
+                addr: "서울특별시 용산구 청파로 74 전자랜드 신관3층 305호",
+                phone: "02-706-0305 (전자랜드 B2B 센터)",
+                mapPinTitle: "서울특별시 용산구 청파로 74 전자랜드 신관",
+                mapPinSub: "전자랜드 B2B 유통 대행 센터 3층 305호 / 용산역 연결",
+                naverMap: "https://map.naver.com/v5/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%B2%AD%ED%8C%8C%EB%A1%9C%2074%20%EC%A0%84%EC%9E%90%EB%9E%9C%EB%93%9C",
+                kakaoMap: "https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%B2%AD%ED%8C%8C%EB%A1%9C%2074%20%EC%A0%84%EC%9E%90%EB%9E%9C%EB%93%9C%EC%8B%A0%EA%B4%80",
+                naverBtn: "서울지사 네이버 지도 열기",
+                kakaoBtn: "서울지사 카카오맵 열기"
+            }
+        };
+
         // 오시는 길 지사 탭 전환
         function switchLocation(type) {
             const headBtn = document.getElementById('tabHeadOfficeBtn');
             const seoulBtn = document.getElementById('tabSeoulOfficeBtn');
-            const officeBadge = document.getElementById('officeBadge');
-            const officeTitle = document.getElementById('officeTitle');
-            const officeAddr = document.getElementById('officeAddr');
-            const mapPinTitle = document.getElementById('mapPinTitle');
-            const mapPinSub = document.getElementById('mapPinSub');
+            const data = locationData[type];
 
             if (type === 'head') {
                 headBtn.className = "px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-white text-sky-600 shadow-sm transition";
                 seoulBtn.className = "px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-slate-600 hover:text-slate-900 transition";
-                
-                officeBadge.innerText = "HEAD OFFICE";
-                officeTitle.innerText = "㈜청림글로비즈 인천 본사";
-                officeAddr.innerText = "인천광역시 미추홀구 주염로73번길 54 제이원플렉스 523호 (주안동)";
-                mapPinTitle.innerText = "인천광역시 미추홀구 주염로73번길 54";
-                mapPinSub.innerText = "제이원플렉스 523호 / 대중교통 및 주차 완비";
             } else {
                 seoulBtn.className = "px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-white text-sky-600 shadow-sm transition";
                 headBtn.className = "px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-slate-600 hover:text-slate-900 transition";
-                
-                officeBadge.innerText = "SEOUL BRANCH & PARTNER OFFICE";
-                officeTitle.innerText = "㈜청림글로비즈 서울지사 (전자랜드)";
-                officeAddr.innerText = "서울특별시 용산구 청파로 74 전자랜드 신관3층 305호";
-                mapPinTitle.innerText = "서울특별시 용산구 청파로 74 전자랜드 신관";
-                mapPinSub.innerText = "전자랜드 B2B 유통 대행 센터 3층 305호 / 용산역 연결";
             }
+
+            document.getElementById('officeBadge').innerText = data.badge;
+            document.getElementById('officeTitle').innerText = data.title;
+            document.getElementById('officeAddr').innerText = data.addr;
+            document.getElementById('officePhone').innerText = data.phone;
+            document.getElementById('mapPinTitle').innerText = data.mapPinTitle;
+            document.getElementById('mapPinSub').innerText = data.mapPinSub;
+
+            const naverLink = document.getElementById('naverMapLink');
+            const kakaoLink = document.getElementById('kakaoMapLink');
+            naverLink.href = data.naverMap;
+            kakaoLink.href = data.kakaoMap;
+            document.getElementById('naverMapBtnText').innerText = data.naverBtn;
+            document.getElementById('kakaoMapBtnText').innerText = data.kakaoBtn;
         }
 
-        // 초기 계산기 구동
         window.onload = function() {
             calculateEstimate();
         };
